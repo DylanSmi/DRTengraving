@@ -131,18 +131,9 @@ p { margin: 0 0 1rem; }
   justify-content: space-between;
   min-height: 68px;
 }
-.brand { display: inline-flex; align-items: center; gap: .55rem; color: var(--ink); }
+.brand { display: inline-flex; align-items: center; color: var(--ink); }
 .brand:hover { color: var(--ink); }
-.brand-mark {
-  font-weight: 300;
-  font-size: 1.05rem;
-  letter-spacing: .18em;
-  border: 1px solid var(--line);
-  padding: .28rem .5rem;
-  border-radius: var(--radius);
-  color: var(--ink);
-}
-.brand-name { font-weight: 400; font-size: 1.05rem; letter-spacing: .04em; color: var(--ink-2); }
+.brand-logo { height: 34px; width: auto; display: block; }
 
 .nav-menu {
   list-style: none;
@@ -179,10 +170,18 @@ p { margin: 0 0 1rem; }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--paper);
+  position: relative;
   border-bottom: 1px solid var(--line-soft);
+  /* Strong paper wash over the wood-grain keeps it a gentle watermark
+     while hero text stays crisp and legible. */
+  background:
+    linear-gradient(180deg, rgba(251,250,247,0.90) 0%, rgba(251,250,247,0.94) 100%),
+    url("../assets/wood-grain.jpg") center / cover no-repeat,
+    var(--paper);
 }
 .hero-inner {
+  position: relative;
+  z-index: 1;
   padding: clamp(4.5rem, 13vw, 9rem) 1.5rem;
   max-width: 760px;
 }
@@ -420,8 +419,7 @@ p { margin: 0 0 1rem; }
   grid-template-columns: 1fr;
   padding-bottom: 2.5rem;
 }
-.footer-brand .brand-mark { display: inline-block; margin-bottom: .9rem; }
-.footer-brand .brand-name { color: var(--ink); }
+.footer-brand .brand-logo { height: 40px; margin-bottom: 1rem; }
 .footer-brand p { margin: .5rem 0 0; max-width: 22rem; font-size: .95rem; }
 .footer-links, .footer-social { display: flex; flex-wrap: wrap; gap: 1.25rem; align-content: start; }
 .footer-links a, .footer-social a { color: var(--ink-2); font-size: .92rem; }
