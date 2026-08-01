@@ -192,6 +192,11 @@ p { margin: 0 0 1rem; }
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
 }
+.hero-title { line-height: 0; margin: 0 0 1.5rem; }
+.hero-logo {
+  width: min(460px, 82%);
+  height: auto;
+}
 .hero-tagline {
   font-size: clamp(1.15rem, 3vw, 1.6rem);
   font-weight: 300;
