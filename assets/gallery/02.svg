@@ -1,20 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Coaster Set engraving example">
   <defs>
-    <linearGradient id="g02" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8a6234"/>
-      <stop offset="1" stop-color="#654321"/>
+    <linearGradient id="g02" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f0ea"/>
+      <stop offset="1" stop-color="#ece5db"/>
     </linearGradient>
   </defs>
   <rect width="600" height="450" fill="url(#g02)"/>
-  <g stroke="#000" stroke-opacity="0.06" stroke-width="6" fill="none">
-    <path d="M0 70 Q 300 40 600 80"/>
-    <path d="M0 160 Q 300 130 600 175"/>
-    <path d="M0 250 Q 300 225 600 265"/>
-    <path d="M0 340 Q 300 315 600 355"/>
+  <g stroke="#94836d" stroke-opacity="0.14" stroke-width="1.25" fill="none">
+    <path d="M0 120 Q 300 100 600 128"/>
+    <path d="M0 210 Q 300 190 600 218"/>
+    <path d="M0 300 Q 300 280 600 308"/>
   </g>
-  <rect x="40" y="40" width="520" height="370" fill="none" stroke="#f4e9d8" stroke-opacity="0.5" stroke-width="3" rx="8"/>
-  <text x="300" y="215" font-family="Georgia, serif" font-size="34" font-weight="700"
-        text-anchor="middle" fill="#f4e9d8" fill-opacity="0.92">Coaster Set</text>
-  <text x="300" y="255" font-family="Georgia, serif" font-size="16"
-        text-anchor="middle" fill="#f4e9d8" fill-opacity="0.6">DRT Engraving</text>
+  <rect x="28" y="28" width="544" height="394" fill="none" stroke="#94836d" stroke-opacity="0.35" stroke-width="1" rx="4"/>
+  <circle cx="300" cy="182" r="30" fill="none" stroke="#94836d" stroke-opacity="0.4" stroke-width="1.25"/>
+  <path d="M289 182 l8 8 l16 -18" fill="none" stroke="#94836d" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="300" y="258" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400"
+        letter-spacing="1" text-anchor="middle" fill="#94836d" fill-opacity="0.92">Coaster Set</text>
+  <text x="300" y="288" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400"
+        letter-spacing="3" text-anchor="middle" fill="#94836d" fill-opacity="0.55">DRT ENGRAVING</text>
 </svg>
