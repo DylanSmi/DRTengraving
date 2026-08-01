@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+# Deploys the static site to GitHub Pages on every push to the default branch.
+on:
+  push:
+    branches:
+      - claude/drt-engraving-website-o2cowm
+      - main
+  workflow_dispatch:
+
+# Permissions the GITHUB_TOKEN needs to publish to Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress run.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        # enablement: true turns Pages on automatically (no manual Settings toggle).
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # The whole repo root is the site (plain static files).
+          path: '.'
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

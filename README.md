@@ -82,11 +82,24 @@ hosted service such as [Formspree](https://formspree.io) or
 
 ## Deploying
 
-Any static host works. A few free options:
+### GitHub Pages (already set up)
 
-- **GitHub Pages** — push this repo, then in *Settings → Pages* choose the
-  branch and `/ (root)` folder. Your site publishes at
-  `https://<user>.github.io/<repo>/`.
+This repo ships a GitHub Actions workflow at
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) that publishes
+the site to GitHub Pages automatically on every push to the default branch.
+The workflow enables Pages for you (`configure-pages` with `enablement: true`),
+so there's usually no manual toggle needed.
+
+- Watch the run under the repo's **Actions** tab. When it finishes, the live
+  URL appears in the workflow's `github-pages` deployment (and under
+  *Settings → Pages*), typically `https://<user>.github.io/<repo>/`.
+- If the first run fails at the "Configure Pages" step, open
+  *Settings → Pages → Build and deployment* and set **Source** to
+  **GitHub Actions**, then re-run the workflow.
+
+### Other static hosts
+
+Any static host works. A few free options:
 - **Netlify** — drag the folder onto the Netlify dashboard, or connect the repo
   for automatic deploys.
 - **Cloudflare Pages / Vercel** — connect the repo; no build command needed,
